@@ -13,14 +13,14 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
 
-/*
+
 Route::get('/images/{path}/{attachment}', function($path, $attachment) {
 	$file = sprintf('storage/%s/%s', $path, $attachment);
 	if(File::exists($file)) {
 		return Image::make($file)->response();
 	}
 });
-*/
+
 Route::group(['prefix' => 'courses'], function () {
 
 	Route::group(['middleware' => ['auth']], function() {

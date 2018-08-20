@@ -94,8 +94,8 @@ class Course extends Model
 	}
 
 	public function pathAttachment () {
-		//return "/images/courses/" . $this->picture;
-	return \Illuminate\Support\Facades\Storage::url('courses/' . $this->picture);
+	return "/images/courses/" . $this->picture;
+	//return \Illuminate\Support\Facades\Storage::url('courses/' . $this->picture);
 	
 	}
 
